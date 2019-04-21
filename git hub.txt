@@ -1,0 +1,4 @@
+git clone, pra clonar o repositorio
+
+
+git status, consegue ver oque está indo pro repositorio original, controle*

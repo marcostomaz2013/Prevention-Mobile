@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prevention Mobile - Login</title>
+    <link rel="icon" href="img/icon/icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles-default.css">
+    <link rel="stylesheet" href="./css/styles-login.css">
+
+  </head>
+  <body>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="modal-cadastro" role="dialog" aria-labelledby="cadastre-se" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="container">
+          <div class="modal-content">
+            <div class="container">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Inscreva-se e ande mais seguro!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group input-wrapper">
+                    <input type="text" class="form-control" id="nome-cadastro" placeholder="Nome Completo">
+                    <label for="nome-cadastro" class="far fa-user input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="text" class="form-control" id="cpf-cadastro" placeholder="Cpf">
+                    <label for="cpf-cadastro" class="far fa-id-card input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="email" class="form-control" id="mail-cadastro" placeholder="E-mail">
+                    <label for="mail-cadastro" class="far fa-envelope input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="password" class="form-control" id="senha-cadastro" placeholder="Senha">
+                    <label for="senha-cadastro" class="fas fa-key input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="password" class="form-control" id="senha-cadastro-confirm" placeholder="Confirmar Senha">
+                    <label for="senha-cadastro-confirm" class="fas fa-key input-icon"></label>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Cadastre-se</button>
+                  </div>
+                </form>
+                <div class="use-terms">
+                  <small>Ao cadastra-se, você concorda com nossos <a href="">Termos de uso</a> e nossa <a href="">Política de privacidade</a>.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Redefinir Senha-->
+    <div class="modal fade" id="modal-redefinir-senha" role="dialog" aria-labelledby="redefinir-senha" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Esqueci a senha</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input type="email" class="form-control" id="mail-redefinir-senha" placeholder="E-mail">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary mx-auto">Redefinir Senha</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-body">
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg pt-1 nav-login">
+        <div class="container">
+          <a class="navbar-brand mx-auto img-not-overflow" href="#">
+            <img src="img/icon/icon.png" width="100" height="100">
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <section id="form-login">
+          <div class="row align-items-center">
+            <div class="col-11 col-sm-10 col-md-7 col-lg-5 mx-auto col-form">
+              <h4 style="text-align: center;">Prevention Mobile</h4>
+              <hr />
+              <form>
+                <div class="form-group input-wrapper">
+                  <input type="email" class="form-control" id="mail-user" placeholder="E-mail">
+                  <label for="mail-user" class="far fa-envelope input-icon"></label>
+                </div>
+                <div class="form-group input-wrapper">
+                  <input type="password" class="form-control" id="senha-user" placeholder="Senha">
+                  <label for="mail-user" class="fas fa-key input-icon"></label>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </div>
+              </form>
+              <div id="esqueceu-senha">
+                ou <a href="" class="link" data-toggle="modal" data-target="#modal-redefinir-senha">Esqueci a Senha</a>
+              </div>
+              <div id="cadastre-se">
+                Não tem uma conta?
+                <a href="" class="link" data-toggle="modal" data-target="#modal-cadastro">Cadastre-se</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> 
+    </div>
+    
+    <!-- imports Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

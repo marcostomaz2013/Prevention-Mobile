@@ -1,0 +1,24 @@
+.jumbotron {
+  padding: 40px 0px;
+  margin-bottom: 0px;
+}
+
+#novidades {
+  background: linear-gradient(to right, #505050, #303030);
+  color: #fff;
+}
+
+#rfid {
+  background: linear-gradient(to right,#303030, #101010);
+  color: #fff;
+}
+
+section img {
+  padding: 20px 0px;
+  height: 300px;
+  max-height: 250px;
+}
+
+section p {
+  text-align: justify;
+}

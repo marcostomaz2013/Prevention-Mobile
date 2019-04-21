@@ -1,0 +1,106 @@
+/* ========================= layout ======================== */
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 0.5em); /* Vertical align = center */
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-icon {
+  font-size: 19px;
+  color: #b0b0b0;
+}
+
+.use-terms {
+  margin-top: 35px;
+  text-align: center;
+}
+
+#modal-cadastro input {
+  padding-left: 40px;
+}
+
+#modal-dadousuario input {
+  padding-left: 45px;
+}
+
+/* -- Footer -- 
+footer {
+  background: #222;
+  padding: 5px 0px 0px;
+  border-top: 5px solid #111;
+}
+
+
+.divider {
+  background-color: #444;
+}
+
+.social-media {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: #111;
+	border-radius: 50%;
+	position: relative;
+	margin: 0px -10px 0px;
+}
+
+.social-media:hover {
+	background: #333;
+	transform: background 0.4s;
+}
+
+.social-media i {
+	position: absolute;
+	top: 18%;
+	left: 25%;
+}
+*/
+/* ========================= Tipografia ======================== */
+@font-face {
+  font-family: BungeeInline-Regular;
+  src: url('../../lib/font/BungeeInline-Regular.ttf');
+}
+
+/* -- Footer --
+footer i {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+footer h5 {
+	color: #eee;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+footer p {
+	color: white;
+	font-size: 16px;
+  text-align: justify;
+  margin: 0px;
+}
+
+#copyright, #copyright span {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  font-weight: bold;
+}
+*/
+/* ========================= Breakpoint's Width Device ======================== */

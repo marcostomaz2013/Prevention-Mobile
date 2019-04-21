@@ -1,0 +1,110 @@
+﻿/*
+* @author Maik Moura
+* @version 1.0
+*/
+/* ========================= layout ======================== */
+
+/* -- Body -- */
+body {
+  background: url('../img/background-security.jpg') fixed no-repeat center center;
+  background-size: cover;
+}
+
+.container, .row, #form-login {
+  height: 100%;
+}
+
+.full-body {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  overflow: auto;
+  background: rgba(0, 0, 0, .4) linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .1)) repeat-x;
+  width: 100%;
+  height: 100%;
+}
+
+/* -- Nav -- */
+.nav-login {
+  height: 80px;
+  border-bottom: 5px solid #222;
+}
+
+.img-not-overflow {
+  position: relative;
+  transform: translateY(40%);
+}
+
+/* -- Form Login -- */
+
+.col-form {
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border: 1px solid #b0b0b0;
+  border-radius: 5px;
+}
+
+#form-login input {
+  padding-left: 40px;
+}
+
+hr {
+  margin: 5px 0px 20px;
+}
+
+#esqueceu-senha, #cadastre-se {
+  text-align: center;
+}
+
+.modal a, #form-login a {
+  font-weight: bold;
+}
+.modal a:hover, #form-login a:hover {
+  text-decoration: none;
+}
+
+#cadastre-se {
+  margin-top: 35px;
+}
+/* ========================= Tipografia ======================== */
+
+
+h4 {
+  font-family: BungeeInline-Regular;
+}
+
+/* ========================= Breakpoint device width ======================== */
+
+/* Dispositivos extra small xs (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) {
+  /* -- Nav --*/
+  .img-not-overflow {
+    transform: translateY(16%);
+  }
+}
+
+/* Dispositivos small sm (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* -- Nav --*/
+  .img-not-overflow {
+    transform: translateY(18%);
+  }
+}
+
+/* Dispositivos médios md (tablets com 768px ou mais) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* -- Nav --*/
+  .img-not-overflow {
+    transform: translateY(20%);
+  }
+}
+
+/* Dispositivos large lg (desktops com 992px ou mais) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+}
+
+/* Dispositivos extra large xl (desktops grandes com 1200px ou mais) */
+@media (min-width: 1200px) {
+
+}

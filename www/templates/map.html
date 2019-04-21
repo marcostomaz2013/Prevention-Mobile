@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prevention Mobile</title>
+    <link rel="icon" href="img/icon/icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles-default.css">
+    <link rel="stylesheet" href="./css/styles-map.css">
+    <link rel="stylesheet" href="./css/styles-index.css">
+    
+  </head>
+  <body>
+     <!-- Modal dados de usuário -->
+    <div class="modal fade" id="modal-dadousuario" role="dialog" aria-labelledby="usuario" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="container">
+          <div class="modal-content">
+            <div class="container">
+              <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group input-wrapper">
+                    <input type="text" class="form-control" id="nome-cadastro" placeholder="Nome Completo">
+                    <label for="nome-cadastro" class="far fa-user input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="text" class="form-control" id="cpf-cadastro" disabled>
+                    <label for="cpf-cadastro" class="far fa-id-card input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="email" class="form-control" id="mail-cadastro" disabled>
+                    <label for="mail-cadastro" class="far fa-envelope input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="password" class="form-control" id="senha-cadastro" placeholder="Insira a nova senha se deseja trocar">
+                    <label for="senha-cadastro" class="fas fa-key input-icon"></label>
+                  </div>
+                  <div class="form-group input-wrapper">
+                    <input type="password" class="form-control" id="senha-cadastro-confirm" placeholder="Confirmar nova Senha">
+                    <label for="senha-cadastro-confirm" class="fas fa-key input-icon"></label>
+                  </div>
+                  <div class="form-group">
+                    <table>
+                      <tr>
+                        <td style="border-spacing: 100px; width: 125px;">
+                          <button type="button" style="width: 100px;" class="btn btn-primary btn-lg btn-block">Salvar</button>
+                        </td>
+                        <td style="border-spacing: 100px; width: 125px;">
+                          <button type="button" style="width: 110px;" class="btn btn-primary btn-lg btn-block">Cancelar</button>
+                        </td>
+                      </tr>
+                    </table>
+                   </div>
+                </form>
+                <div class="use-terms">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal contatos -->
+    <div class="modal fade" id="modal-contatos" role="dialog" aria-labelledby="contatos" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="container">
+          <div class="modal-content">
+            <div class="container">
+              <div class="modal-header">
+                <h5>Escolha aqui os contatos desejados para encaminhar a mensagem </h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <table border="0">
+                      <tr>
+                        <td width="15px">
+                          <input type="checkbox" name="contato1">
+                        </td>
+                        <td>
+                          Contato1
+                        </td>
+                        <td>
+                          (xx) x xxxx-xxxx
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="contato2">
+                        </td>
+                        <td>
+                          Contato3
+                        </td>
+                        <td>
+                          (xx) x xxxx-xxxx
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="contato3">
+                        </td>
+                        <td>
+                          Contato3
+                        </td>
+                        <td>
+                          (xx) x xxxx-xxxx
+                        </td>
+                      </tr>
+                      <tr>
+                        <div class="form-group">
+                          <td style="border-spacing: 100px; width: 125px;" colspan="2">
+                            <button type="button" style="width: 100px;" class="btn btn-primary btn-lg btn-block">Salvar</button>
+                          </td>
+                        </div>
+                        <div class="form-group">
+                        <td style="border-spacing: 100px; width: 125px;" colspan="2">
+                          <button type="button" style="width: 110px;" class="btn btn-primary btn-lg btn-block">Cancelar</button>
+                        </td>
+                        </div>
+                      </tr>
+                    </table>
+                </form>
+                <div class="use-terms">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm pt-1">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-option" aria-controls="navbar-option" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="./img/icon/icon.png" width="30" height="30">
+        Prevention Mobile
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbar-option">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="backups.html" >backups</a>
+          </li>
+           <ul class="navbar-nav ml-auto mr-0">
+              <li class="nav-item">
+              <div class="btn-toolbar" role="toolbar">
+              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-contatos">
+                Contatos
+              </a>
+              </div>
+              </li>
+               </ul>
+        </ul>
+        <ul class="navbar-nav ml-auto mr-0">
+          <li class="nav-item dropdown dropleft">
+            <a class="nav-link dropdown-toggle" href="#" id="user-options" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Usuario
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="navbar-nav ml-auto mr-0">
+              <li class="nav-item">
+              <div class="btn-toolbar" role="toolbar">
+              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-dadousuario">
+                Meus dados
+              </a>
+              </div>
+              </li>
+               </ul>
+              <a class="dropdown-item" href="#">Ação 1</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row align-items-center" id="row-dispositivo">
+        <div class="col-11 mx-auto">
+          <h5>Ultima Localização<small> Dispositivo <span>Galaxy S10</span></small></h5>
+        </div>
+      </div>
+      <div class="row" id="row-map">
+        <div class="col-11 mx-auto">
+          <section class="container-map">
+            <iframe id="map" src="api-google-maps.html"></iframe>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!--
+    <footer>
+      <div class="container">
+        <p id="copyright"><span>Copyright © Prevention Mobile 2019. Todos direitos reservados.</span><p>
+      </div>
+    </footer>
+    -->
+    <!-- imports Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
