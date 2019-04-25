@@ -13,11 +13,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles-default.css">
     <link rel="stylesheet" href="./css/styles-map.css">
-    <link rel="stylesheet" href="./css/styles-index.css">
-    
+
+    <!-- JS -->
+    <script src="mascara.min.js"></script>
+
   </head>
   <body>
-     <!-- Modal dados de usuário -->
+
+  	<!-- Modal dados de usuário -->
     <div class="modal fade" id="modal-dadousuario" role="dialog" aria-labelledby="usuario" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="container">
@@ -35,7 +38,7 @@
                     <label for="nome-cadastro" class="far fa-user input-icon"></label>
                   </div>
                   <div class="form-group input-wrapper">
-                    <input type="text" class="form-control" id="cpf-cadastro" disabled>
+                    <input type="text" class="form-control" id="cpf-cadastro" maxlength="14" disabled>
                     <label for="cpf-cadastro" class="far fa-id-card input-icon"></label>
                   </div>
                   <div class="form-group input-wrapper">
@@ -144,68 +147,69 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm pt-1">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-option" aria-controls="navbar-option" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="./img/icon/icon.png" width="30" height="30">
-        Prevention Mobile
-      </a>
+    <div class="full-body">
+	    <nav class="navbar navbar-dark bg-dark navbar-expand-sm pt-1">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-option" aria-controls="navbar-option" aria-expanded="false" aria-label="Alterna navegação">
+	          <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	        <img src="./img/icon/icon.png" width="30" height="30">
+	        Prevention Mobile
+	      </a>
 
-      <div class="collapse navbar-collapse" id="navbar-option">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="backups.html" >backups</a>
-          </li>
-           <ul class="navbar-nav ml-auto mr-0">
-              <li class="nav-item">
-              <div class="btn-toolbar" role="toolbar">
-              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-contatos">
-                Contatos
-              </a>
-              </div>
-              </li>
-               </ul>
-        </ul>
-        <ul class="navbar-nav ml-auto mr-0">
-          <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle" href="#" id="user-options" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Usuario
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <ul class="navbar-nav ml-auto mr-0">
-              <li class="nav-item">
-              <div class="btn-toolbar" role="toolbar">
-              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-dadousuario">
-                Meus dados
-              </a>
-              </div>
-              </li>
-               </ul>
-              <a class="dropdown-item" href="#">Ação 1</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row align-items-center" id="row-dispositivo">
-        <div class="col-11 mx-auto">
-          <h5>Ultima Localização<small> Dispositivo <span>Galaxy S10</span></small></h5>
-        </div>
-      </div>
-      <div class="row" id="row-map">
-        <div class="col-11 mx-auto">
-          <section class="container-map">
-            <iframe id="map" src="api-google-maps.html"></iframe>
-          </section>
-        </div>
-      </div>
-    </div>
+	      <div class="collapse navbar-collapse" id="navbar-option">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item active">
+	            <a class="nav-link" href="backups.html" >backups</a>
+	          </li>
+	           <ul class="navbar-nav ml-auto mr-0">
+	              <li class="nav-item">
+	              <div class="btn-toolbar" role="toolbar">
+	              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-contatos">
+	                Contatos
+	              </a>
+	              </div>
+	              </li>
+	               </ul>
+	        </ul>
+	        <ul class="navbar-nav ml-auto mr-0">
+	          <li class="nav-item dropdown dropleft">
+	            <a class="nav-link dropdown-toggle" href="#" id="user-options" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	              Usuario
+	            </a>
+	            <div class="dropdown-menu" id="dropdown-user" aria-labelledby="navbarDropdown">
+	              <ul class="navbar-nav ml-auto mr-0">
+	              <li class="nav-item" style="width:100%;">
+	              <div class="" role="toolbar">
+	              <a href="" class="btn-toolbar btn btn-secondary btn-block" data-toggle="modal" role="button" data-target="#modal-dadousuario">
+	                Meus dados
+	              </a>
+	              </div>
+	              </li>
+	               </ul>
+	               <!--<a class="dropdown-item" href="#">Ação 1</a>-->
+	              <div class="dropdown-divider"></div>
+	              <a class="dropdown-item" href="#">Sair</a>
+	            </div>
+	          </li>
+	        </ul>
+	      </div>
+	    </nav>
+	   <div class="container-fluid">
+	      <!-- <div class="row" id="row-dispositivo">
+	       <div class="col-11 mx-auto">
+	          <h5>Ultima Localização<small> Dispositivo <span>Galaxy S10</span></small></h5>
+	        </div>
+	      </div> -->
+	      <div class="row" id="row-map" >
+	        <div class="col-12">
+	          <section class="container-map">
+	            <iframe id="map" src="api-google-maps.html"></iframe>
+	          </section>
+	        </div>
+	      </div>
+	    </div>
+	</div>
     <!--
     <footer>
       <div class="container">

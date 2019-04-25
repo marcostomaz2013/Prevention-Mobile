@@ -11,7 +11,7 @@ body {
 }
 
 .container, .row, #form-login {
-  height: 100%;
+  height: 90%;
 }
 
 .full-body {
@@ -26,7 +26,8 @@ body {
 
 /* -- Nav -- */
 .nav-login {
-  height: 80px;
+  /*height: 80px;*/
+  height: 10%;
   border-bottom: 5px solid #222;
 }
 
@@ -38,6 +39,7 @@ body {
 /* -- Form Login -- */
 
 .col-form {
+  margin-top: 5%;
   padding: 20px 40px;
   background-color: #ffffff;
   border: 1px solid #b0b0b0;
@@ -81,6 +83,9 @@ h4 {
   .img-not-overflow {
     transform: translateY(16%);
   }
+  .col-form{
+    margin-top: 20%;
+  }
 }
 
 /* Dispositivos small sm (telefones em modo paisagem, com 576px ou mais) */
@@ -89,6 +94,9 @@ h4 {
   .img-not-overflow {
     transform: translateY(18%);
   }
+  .col-form{
+    margin-top: 15%;
+  }
 }
 
 /* Dispositivos médios md (tablets com 768px ou mais) */
@@ -96,6 +104,9 @@ h4 {
   /* -- Nav --*/
   .img-not-overflow {
     transform: translateY(20%);
+  }
+  .col-form{
+    margin-top: 15%;
   }
 }
 

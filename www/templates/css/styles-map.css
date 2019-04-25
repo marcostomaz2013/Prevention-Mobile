@@ -1,10 +1,33 @@
-body, .container-fluid {
+body{
   height: 100%;
+  width: 100%;
+  border: 0px 0px 0px 0px;
+  background: url('../img/background-security.jpg') fixed no-repeat center center;
+  background-size: cover;
+
+}
+
+.full-body{
+  position: fixed;
+  top: 0;
+  margin: auto;
+  overflow: auto;
+  background: rgba(0, 0, 0, .4) linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .1)) repeat-x;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.container-fluid{
+  padding: 0px 0px 0px 0px;
+  margin: 0px none;
+  height: 90%;
 }
 
 nav {
-  min-height: 65px;
-  margin-bottom: 10px;
+   /* min-height: 60px;*/
+  margin-bottom: 0px;
+  height: 10%;
 }
 
 nav a {
@@ -12,25 +35,50 @@ nav a {
   font-weight: bold;
 }
 
+#dropdown-user {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.dropdown-item:hover{
+  color: #fff;
+  background-color: #6c757d;
+  border-radius: 5px;
+}
+
+.dropdown-divider {
+  border: 1px solid #7d7d7d;
+}
+
 #row-dispositivo {
-  height: 5%;
-  margin-bottom: 5px;
+  height: 0px;
+  margin-bottom: 0px;
+  margin: 0px none;
 }
 
 #row-map {
-  height: 95%;
-  margin-bottom: 10px;
+  height: 100%;
+  width: 90%;
+  margin-bottom: 0px;
+  padding-left: 0px;
 }
 
 .container-map, #map {
-  width: 100%;
-  height: 100%;
+  width: 97%;
+  height: 95%;
 }
 
 #map {
   border: 2px solid #c0c0c0;
 }
 
+#modal-dadousuario input {
+  padding-left: 45px;
+}
 /* ========================= Breakpoint device width ======================== */
 
 /* Dispositivos extra small xs (telefones em modo retrato, com menos de 576px) */
