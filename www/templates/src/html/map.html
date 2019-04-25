@@ -11,30 +11,31 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/styles-default.css">
-    <link rel="stylesheet" href="./css/styles-map.css">
+    <link rel="stylesheet" href="../css/styles-default.css">
+    <link rel="stylesheet" href="../css/styles-map.css">
 
     <!-- JS -->
-    <script src="mascara.min.js"></script>
+    <script src="../js/mascara.min.js"></script>
 
   </head>
   <body>
 
   	<!-- Modal dados de usuário -->
-    <div class="modal fade" id="modal-dadousuario" role="dialog" aria-labelledby="usuario" aria-hidden="true">
+    <div class="modal fade" id="modal-dados-usuario" role="dialog" aria-labelledby="usuario" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="container">
           <div class="modal-content">
             <div class="container">
               <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <h5 class="modal-title" id="exampleModalLabel">Meus Dados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
                 <form>
                   <div class="form-group input-wrapper">
-                    <input type="text" class="form-control" id="nome-cadastro" placeholder="Nome Completo">
+                    <input type="text" class="form-control" id="alt-nome" required="required" placeholder="Nome Completo">
                     <label for="nome-cadastro" class="far fa-user input-icon"></label>
                   </div>
                   <div class="form-group input-wrapper">
@@ -46,28 +47,17 @@
                     <label for="mail-cadastro" class="far fa-envelope input-icon"></label>
                   </div>
                   <div class="form-group input-wrapper">
-                    <input type="password" class="form-control" id="senha-cadastro" placeholder="Insira a nova senha se deseja trocar">
+                    <input type="password" class="form-control" id="alt-senha"  required="required" placeholder="Nova Senha">
                     <label for="senha-cadastro" class="fas fa-key input-icon"></label>
                   </div>
                   <div class="form-group input-wrapper">
-                    <input type="password" class="form-control" id="senha-cadastro-confirm" placeholder="Confirmar nova Senha">
+                    <input type="password" class="form-control" id="alt-senha-confirm" required="required" placeholder="Confirmar nova Senha">
                     <label for="senha-cadastro-confirm" class="fas fa-key input-icon"></label>
                   </div>
-                  <div class="form-group">
-                    <table>
-                      <tr>
-                        <td style="border-spacing: 100px; width: 125px;">
-                          <button type="button" style="width: 100px;" class="btn btn-primary btn-lg btn-block">Salvar</button>
-                        </td>
-                        <td style="border-spacing: 100px; width: 125px;">
-                          <button type="button" style="width: 110px;" class="btn btn-primary btn-lg btn-block">Cancelar</button>
-                        </td>
-                      </tr>
-                    </table>
-                   </div>
+                  <div class="form-group justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-primary btn-block">Salvar Alterações</button>
+                  </div>
                 </form>
-                <div class="use-terms">
-                </div>
               </div>
             </div>
           </div>
@@ -90,53 +80,53 @@
               </div>
               <div class="modal-body">
                 <form>
-                    <table border="0">
-                      <tr>
-                        <td width="15px">
-                          <input type="checkbox" name="contato1">
-                        </td>
-                        <td>
-                          Contato1
-                        </td>
-                        <td>
-                          (xx) x xxxx-xxxx
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <input type="checkbox" name="contato2">
-                        </td>
-                        <td>
-                          Contato3
-                        </td>
-                        <td>
-                          (xx) x xxxx-xxxx
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <input type="checkbox" name="contato3">
-                        </td>
-                        <td>
-                          Contato3
-                        </td>
-                        <td>
-                          (xx) x xxxx-xxxx
-                        </td>
-                      </tr>
-                      <tr>
-                        <div class="form-group">
-                          <td style="border-spacing: 100px; width: 125px;" colspan="2">
-                            <button type="button" style="width: 100px;" class="btn btn-primary btn-lg btn-block">Salvar</button>
-                          </td>
-                        </div>
-                        <div class="form-group">
+                  <table border="0">
+                    <tr>
+                      <td width="15px">
+                        <input type="checkbox" name="contato1">
+                      </td>
+                      <td>
+                        Contato1
+                      </td>
+                      <td>
+                        (xx) x xxxx-xxxx
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="contato2">
+                      </td>
+                      <td>
+                        Contato3
+                      </td>
+                      <td>
+                        (xx) x xxxx-xxxx
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="contato3">
+                      </td>
+                      <td>
+                        Contato3
+                      </td>
+                      <td>
+                        (xx) x xxxx-xxxx
+                      </td>
+                    </tr>
+                    <tr>
+                      <div class="form-group">
                         <td style="border-spacing: 100px; width: 125px;" colspan="2">
-                          <button type="button" style="width: 110px;" class="btn btn-primary btn-lg btn-block">Cancelar</button>
+                          <button type="button" style="width: 100px;" class="btn btn-primary btn-lg btn-block">Salvar</button>
                         </td>
-                        </div>
-                      </tr>
-                    </table>
+                      </div>
+                      <div class="form-group">
+                      <td style="border-spacing: 100px; width: 125px;" colspan="2">
+                        <button type="button" style="width: 110px;" class="btn btn-primary btn-lg btn-block">Cancelar</button>
+                      </td>
+                      </div>
+                    </tr>
+                  </table>
                 </form>
                 <div class="use-terms">
                 </div>
@@ -153,7 +143,7 @@
 	          <span class="navbar-toggler-icon"></span>
 	      </button>
 	      <a class="navbar-brand" href="#">
-	        <img src="./img/icon/icon.png" width="30" height="30">
+	        <img src="../img/icon/icon.png" width="30" height="30">
 	        Prevention Mobile
 	      </a>
 
@@ -162,15 +152,13 @@
 	          <li class="nav-item active">
 	            <a class="nav-link" href="backups.html" >backups</a>
 	          </li>
-	           <ul class="navbar-nav ml-auto mr-0">
-	              <li class="nav-item">
-	              <div class="btn-toolbar" role="toolbar">
-	              <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-contatos">
-	                Contatos
-	              </a>
-	              </div>
-	              </li>
-	               </ul>
+            <li class="nav-item">
+              <div class="btn-toolbar" role="toolbar">
+                <a href="" class="btn btn-secondary ml-2" data-toggle="modal" role="button" data-target="#modal-contatos">
+                  Contatos
+                </a>
+              </div>
+            </li>
 	        </ul>
 	        <ul class="navbar-nav ml-auto mr-0">
 	          <li class="nav-item dropdown dropleft">
@@ -178,16 +166,10 @@
 	              Usuario
 	            </a>
 	            <div class="dropdown-menu" id="dropdown-user" aria-labelledby="navbarDropdown">
-	              <ul class="navbar-nav ml-auto mr-0">
-	              <li class="nav-item" style="width:100%;">
-	              <div class="" role="toolbar">
-	              <a href="" class="btn-toolbar btn btn-secondary btn-block" data-toggle="modal" role="button" data-target="#modal-dadousuario">
+	              <a href="" class="dropdown-item btn-toolbar btn btn-secondary btn-block" data-toggle="modal" role="button" data-target="#modal-dados-usuario">
 	                Meus dados
 	              </a>
-	              </div>
-	              </li>
-	               </ul>
-	               <!--<a class="dropdown-item" href="#">Ação 1</a>-->
+	              <!--<a class="dropdown-item" href="#">Ação 1</a>-->
 	              <div class="dropdown-divider"></div>
 	              <a class="dropdown-item" href="#">Sair</a>
 	            </div>
@@ -195,28 +177,23 @@
 	        </ul>
 	      </div>
 	    </nav>
-	   <div class="container-fluid">
-	      <!-- <div class="row" id="row-dispositivo">
-	       <div class="col-11 mx-auto">
-	          <h5>Ultima Localização<small> Dispositivo <span>Galaxy S10</span></small></h5>
-	        </div>
-	      </div> -->
-	      <div class="row" id="row-map" >
-	        <div class="col-12">
-	          <section class="container-map">
-	            <iframe id="map" src="api-google-maps.html"></iframe>
-	          </section>
-	        </div>
-	      </div>
-	    </div>
-	</div>
-    <!--
-    <footer>
-      <div class="container">
-        <p id="copyright"><span>Copyright © Prevention Mobile 2019. Todos direitos reservados.</span><p>
+      <!-- <div class="row" id="row-dispositivo">
+        <div class="col-11 mx-auto">
+          <h5>Ultima Localização<small> Dispositivo <span>Galaxy S10</span></small></h5>
+        </div>
+      </div> -->
+      <div class="row justify-content-center" id="row-map">
+        <div class="col-12 col-md-9 col-lg-10">
+          <section class="container-map">
+            <iframe id="map" src="api-google-maps.html"></iframe>
+          </section>
+        </div>
+        <div class="col-3 col-lg-2 d-none d-md-block" id="adsense-col">
+          <aside id="adsense"></aside>
+        </div>
       </div>
-    </footer>
-    -->
+    </div>
+    
     <!-- imports Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -2,13 +2,13 @@
 /*var corIncompleta = "#eff70b"*/
 
 function ResetCampos(){
-    var textFields = document.getElementsByTagName("input");
-        for(var i=0; i < textFields.length; i++){
-        if(textFields[i].type == "text"){
-            textFields[i].style.backgroundColor = "";
-            textFields[i].style.borderColor = "";
-        }
-    }   
+  var textFields = document.getElementsByTagName("input");
+  for(var i=0; i < textFields.length; i++){
+    if(textFields[i].type == "text")  {
+      textFields[i].style.backgroundColor = "";
+      textFields[i].style.borderColor = "";
+    }
+  }   
 }
 
 function coresMask(t){
@@ -35,9 +35,9 @@ function mascara(m,t,e,c){
 	var l = texto.length;
 	var lm = m.length;
 	if(window.event) {                  
-	    id = e.keyCode;
+	  id = e.keyCode;
 	} else if(e.which){                 
-	    id = e.which;
+	  id = e.which;
 	}
 	cursorfixo=false;
 	if(cursor < l)cursorfixo=true;
@@ -58,7 +58,6 @@ function mascara(m,t,e,c){
 		 		}
 		 		if(id!=8 && !cursorfixo)cursor++;
 		 		if((j)==l+1)break;
-		 		
 		 	} 	
 	 	}
 	 	if(c)coresMask(t);
